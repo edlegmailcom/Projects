@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mi primera página con estilo</title>
+		<link rel="stylesheet" href="FundaeLPW.css" >
+		</style>
+	</head>	
+	<body>
+		<script Languaje = "JavaScript">
+			function AbrirVentana() {
+			ventana = open("", "nueva", "toolbar= no, directories = no, menubar = no, width = 180, height = 180");
+			ventana.document.write("<head><title>Nueva ventana</title></head></body>");
+			ventana.document.write("<font size=4 color=red>Nueva ventana</font><br><br><br>");
+			ventana.document.write("<form><input type='button' value='Cerrar' onClick='self.close()'></form>");
+			}
+			switch(window.screen.colorDepth)
+			{
+			case 1: case 4:
+				document.bgColor = "white";
+				break;
+			case 18 case 15: case 16:
+				document.bgColor = "blue";
+				break;
+			case 24: case 32:
+				document.bgColor = "skyblue";
+				break;
+			default:
+				document.bgColor = "white";
+			}
+			document.write("Su pantalla soporta color de " + window.screen.colorDepth + " bit");
+		</script>		<form>
+			<input type = "button" value="Abrir una ventana" onClick = "AbrirVentana();">
+			<br>
+		</form>
+		<!-- Menú de navegación del sitio -->
+		<ul class="navbar">
+		  <li><a href="indice.html">Página principal</a>
+		  <li><a href="meditaciones.html">Meditaciones</a>
+		  <li><a href="ciudad.html">Mi ciudad</a>
+		  <li><a href="https://www.w3.org/Style/CSS/learning">Página css</a>
+		</ul>		
+		<div id=cabecera>	<h1> Hola, mundo! </h1></div>
+		<p>Este es un párrafo de ejemplo </p>
+		<h2>Enlaces útiles</h2>
+		<a href = "https://www.efundae.es/mod/legendaria/view.php?id=3009" target="_blank" >Curso de desarrollo de páginas web Fundae</a>
+		<br>
+		<br>
+		<img id=fraga title "Fraga en Navidad" 
+		src = "Screenshot_20231224_190412_WhatsApp.jpg" 
+		alt = "he puesto una imagen navideña" >
+		
+		<p>Lista no ordenada tareas pendientes </p>
+		<ul>
+		<li> hacerla más pequeña		</li>
+		<li> centrarla		</li>
+		<li> modificar tipos de letra 		</li>
+		<li> añadir contenido		</li>
+		</ul>
+		<p>y ahora ordenado </p>
+		<ol>
+				<li> hacerla más pequeña		</li>
+		<li> centrarla		</li>
+		<li> modificar tipos de letra 		</li>
+		<li> añadir contenido		</li>
+	</ol>
+	<p>Debería haber más cosas aquí, pero todavía no sé
+	qué poner.
+
+	<!-- Firma y fecha de la página, ¡sólo por cortesía! -->
+	<address>Creada el 5 de abril de 2004<br>
+	  por mí mismo.</address>	
+	</body>
+</html>
+ <!-- 
+		<script type = "text/javascript" src="codigo.js" > </script>
+
+img alt
+ul
+ol
+li
+
+.html
+
+
+	Una etiqueta HTML es más que un simple conjunto de corchetes angulares;
+	es una instrucción para el navegador, un guía que le dice cómo debe
+	presentar el contenido encerrado dentro de ella. 
+	Las etiquetas nos permiten organizar el contenido en secciones lógicas, 
+	hacer que ciertas partes se destaquen, y facilitar la navegación dentro del documento.
+
+	Etiquetas de apertura y cierre	<etiqueta> </etiqueta>
+	Etiquetas auto-cerradas <etiqueta/>
+	
+	Un párrafo de texto se encierra entre las etiquetas de apertura y cierre <p> y </p>:
+	Una imagen se inserta mediante una etiqueta auto-cerrada <img>, utilizando atributos 
+	para especificar la fuente de la imagen y una descripción alternativa
+		<p>Este es un párrafo de ejemplo.</p>
+		<img src=”ruta/a/la/imagen.jpg” alt=”Descripción de la imagen”>
+
+	Etiquetas comunes en HTML
+		Etiquetas de texto
+			Encabezados (<h1> a <h6>):
+				Son los faros que guían a los usuarios a través de nuestra página, indicando
+				los títulos y sub-títulos. Desde <h1>, el más importante, hasta <h6>, el menos
+				prominente, estos encabezados estructuran el contenido jerárquicamente.
+			Párrafos (<p>):
+				Son los bloques básicos de texto, donde se desarrollan las ideas y se comparte la información.
+					<h1>Este es un encabezado principal</h1>
+					<h2>Este es un sub-encabezado</h2>
+					<p>Este es un párrafo que explica algo importante.</p>
+			Negrita (<strong>) y Itálica (<em>):
+				Usadas para enfatizar partes del texto, <strong> da un peso adicional a las
+				palabras, mientras que <em> las inclina sutilmente, indicando énfasis o intención.
+			Enlaces
+				La web es una red interconectada gracias a los enlaces, y la etiqueta <a> es
+				el puente que conecta sus múltiples nodos:
+				• Uso básico: Con el atributo href, definimos el destino del enlace. Los
+					atributos target y title nos permiten controlar cómo se abrirá el enlace
+					y ofrecer información sobre la misma.
+				 <p>Es <strong>importante</strong> enfatizar esto, no lo olvides.</p>
+				 <p>Para resaltar algo con <emdelicadoza</em>, usa itálica.</p>
+				 <a href="https target="_blank” title="Visita Ejemplo">Haz clic para ver el enlace</a>
+			Imágenes
+				Las imágenes dan vida a nuestras páginas, y la etiqueta <img> nos permite
+				incrustar estas ventanas visuales:
+				• Incrustación de imágenes: Con el atributo src especificamos la ruta de
+					la imagen, mientras que alt proporciona un texto alternativo para la
+					accesibilidad, y title ofrece información adicional al pasar el cursor
+					sobre la imagen.
+				<img src="imagen.pg" alt="Descripción de la imagen" title="Título de la imagen">
+			Listas
+				Las listas organizan la información de manera que sea fácil de digerir, ya sea
+				en secuencia (<ol>) o sin un orden específico (<ul>):
+				• Listas ordenadas y no ordenadas: 
+					Utilizamos <ol> para enumerar elementos en un orden específico, y 
+					<ul> para agrupar elementos sin un orden particular. 
+					Dentro de estas, <li> marca cada ítem de la lista.
+
+					 <ul>
+						 <li>Elemento de la lista no ordenada</li>
+						 <li>Otro elemento</li>
+					 </ul>
+					 <ol>
+						 <li>Elemento de la lista ordenada</li>
+						 <li>Segundo elemento</li>
+					 </ol>
+	Atributos comunes
+		Los atributos son esenciales para afinar el comportamiento de las etiquetas,
+		permitiéndonos personalizar nuestra página web de maneras que van más allá de 
+		la simple estructura y contenido.
+	Atributos globales
+		Imagina que puedes dotar a casi cualquier elemento en tu página web de
+		una identidad única, una clase para agruparlos, o incluso un estilo particular
+		directamente en el elemento. Los atributos globales son precisamente eso:
+		atributos versátiles que puedes aplicar a casi cualquier etiqueta HTML para
+		mejorar su funcionalidad y apariencia.
+
+		id:
+			Este atributo asigna una identidad única a un elemento, lo que te permite
+			dirigirte a él específicamente con CSS y JavaScript. Es como asignar un
+			nombre distintivo en una multitud, asegurando que puedes encontrarlo sin
+			errores.
+			<div id=”sección principal” >Contenido destacado aquí.</div>
+		class:
+			Mientras id es para individuos únicos, class es para grupos. Puedes asignar
+			la misma clase a varios elementos para estilizarlos de manera uniforme o
+			dirigirte a ellos con scripts.
+		style:
+			Si deseas aplicar estilos directamente a un elemento sin usar una hoja de
+			estilo externa, style es tu herramienta. Permite insertar declaraciones CSS
+			directamente en tu HTML.
+		title:
+			Este atributo proporciona información adicional sobre un elemento,
+			generalmente mostrada como una "tooltip" cuando el cursor pasa sobre él.
+			<p class=”texto_destacado” >Este párrafo es especial.</p>
+			<span style="color: blue; ">Texto en azul.</span>
+			<abbr title="Hypertext Markup Languaje">HTML</abbr>
+
+	Atributos específicos
+		Algunos atributos están diseñados para bailar en perfecta armonía con
+		ciertas etiquetas, ampliando sus capacidades y definiendo su
+		comportamiento de maneras únicas.
+
+		href en <a>:
+			El atributo href en la etiqueta de enlace <a> especifica el destino del enlace.
+		src y alt en <img>:
+			Para las imágenes, src señala la fuente de la imagen, y alt ofrece un texto
+			alternativo que describe la imagen, crucial para la accesibilidad web.
+		type en <input>:
+			Este atributo define el tipo de entrada que el usuario debe proporcionar,
+			como texto, correo electrónico o contraseña, transformando el campo de
+			entrada para adaptarse a la información requerida.
+
+			<a href=”https://www.ejemplo.com”">Visita Ejemplo</a>
+			<img src=”imagen.jpg" alt=”Descripción de la imagen”>
+			<input type="email" name="correo”>
+
+	Estructuración del contenido
+		Contenedores
+			<div>:
+				El <div> es como un gran contenedor de almacenamiento, perfecto para
+				agrupar bloques de contenido y elementos de diseño. Su naturaleza neutra
+				lo hace ideal para ser estilizado con CSS, convirtiéndolo en el pilar de la
+				estructura y el diseño web.
+				 <div class="seccion-menu">
+				 <!- - Contenido del menu aquí - - >
+				 </div>
+			<span>:
+				Mientras que <div> se ocupa de los grandes esquemas, <span> se especializa
+				en los detalles. Utilizado para agrupar contenido en línea dentro de otros
+				elementos, <span> nos permite aplicar estilos a fragmentos de texto o
+				pequeños componentes sin alterar el flujo del documento.
+	Elementos semánticos
+		Más allá de la pura estructura, HTML nos brinda etiquetas semánticas que
+		infunden significado a nuestra organización del contenido. Estos elementos
+		no solo estructuran visualmente la información, sino que también
+		comunican su propósito a los navegadores y tecnologías asistivas,
+		mejorando la accesibilidad y la comprensión de la página.
+
+		<header> y <footer>:
+			Estos elementos enmarcan nuestra página o secciones de ella,
+			proporcionando un contexto claro. El <header> suele contener la navegación
+			y la identidad del sitio, mientras que el <footer> ofrece información
+			complementaria, enlaces útiles y derechos de autor.
+
+			<p>Este es un <span class=”texto.destacado” >texto destacado</span> dentro de un párrafo</p>
+
+					 <header>
+						<!- - Navegación y branding aquí - - >
+					 </header>
+		<article> y <section>:
+			<article> es perfecto para contenidos autocontenidos e independientes,
+				como publicaciones de blog o artículos de noticias, que están destinados a
+				ser distribuidos y reutilizados. 
+			<section>, por otro lado, divide el contenido en segmentos temáticos, 
+			cada uno con su propio significado dentro del contexto de la página.
+
+				<footer>
+					<!- - Información de contacto y enlaces aquí - - >
+				</footer>
+
+			 <article>
+				<!- - Contenido del artículo aquí - - >
+			 </article>
+			 <section>
+				<!- - Contenido temático aquí - - >
+			 </section>
+
+Conclusión
+	MDN Web Docs (Mozilla Developer Network):  guías y referencias HTML en
+		https://developer.mozilla.org/es/docs/Web/HTML.
+	W3Schools: tutoriales fáciles de seguir y referencias rápidas para HTML. 	
+		https://www.w3schools.com/html/.
+	Herramientas y editores
+		Visual Studio Code: Un editor de código ligero 	https://code.visualstudio.com/
+		Brackets: Un editor de texto ligero, https://brackets.io/
+
+	Uso de imágenes
+		La Etiqueta <img>
+			src (source):
+			alt (alternative text):
+				<img src=”ruta/a/la/imagen.jpg”>
+				<img src=”imagen.jpg” alt=”Descripción de la imagen”>
+			width y height:
+Estos atributos definen el ancho y alto de la imagen en la página,
+permitiéndote controlar su tamaño de visualización. Aunque son opcionales,
+su uso puede ser estratégico para mantener la disposición visual de tu página
+mientras las imágenes se están cargando, y para asegurar que las imágenes
+se muestren en las dimensiones deseadas sin necesidad de recurrir a ajustes
+de CSS o a la alteración de la imagen original.
+3
+Prácticas recomendadas
+En el mundo visualmente estimulante de la web, las imágenes son más que
+simples adornos; son narradores poderosos, portadores de emociones y
+transmisores de información. Sin embargo, para que estas narrativas
+visuales alcancen su máximo potencial y sean accesibles para todos los
+usuarios, es crucial adherirse a un conjunto de prácticas recomendadas.
+En este sentido te recomendamos las siguientes prácticas:
+• Texto Alternativo: Siempre proporciona un texto alt significativo para
+tus imágenes. No solo es una cuestión de accesibilidad, sino que
+también mejora el SEO de tu página.
+• Optimización de Imágenes: El tamaño y la calidad de tus imágenes
+deben equilibrarse para mantener rápidos tiempos de carga sin
+sacrificar la estética. Herramientas de optimización en línea pueden
+ayudarte a comprimir imágenes sin perder calidad visible.
+• Elección del Formato: Selecciona el formato de imagen más
+adecuado para tus necesidades, considerando la calidad, el tamaño
+del archivo y la funcionalidad (como la animación o la transparencia).
+3 Accesibilidad:
+ <img src=”imagen.jpg” alt=”Descripción de la imagen” width=”500” height=”300”>
+7
+Creación de enlaces
+Los enlaces son el tejido conectivo de la World Wide Web, uniendo ideas,
+páginas y recursos en una red interconectada de información. Más que
+simples conexiones, los enlaces invitan a la exploración, abriendo puertas a
+nuevos conocimientos y experiencias. En esta sección, nos sumergiremos en
+la etiqueta <a>, el pilar de la navegación web, y descubriremos cómo utilizar
+sus atributos para tejer una red de caminos a través de nuestra página y más
+allá.
+La Etiqueta <a>
+La etiqueta <a>, abreviatura de "ancla", es una de las herramientas más
+poderosas y fundamentales en el arsenal de HTML. A través de ella, podemos
+crear enlaces que no solo guían a los usuarios a través de diferentes partes
+de nuestra página o a otros sitios web, sino que también pueden llevar a
+acciones como abrir una aplicación de correo electrónico. La versatilidad de
+<a> la convierte en un elemento esencial para la navegación y la
+interactividad en la web.
+Atributos de enlace
+la verdadera magia de los enlaces reside en su capacidad para ser moldeados
+y adaptados a nuestras necesidades específicas, gracias a una serie de
+atributos clave. Estos atributos, incorporados en la emblemática etiqueta
+<a>, nos brindan el poder de definir no solo el destino de nuestros enlaces,
+sino también la manera en que se presentan y comportan.
+8
+Estos atributos son:
+href (Hypertext Reference):
+El corazón de cada enlace, href especifica el destino del enlace, ya sea una
+URL externa que lleva a otro sitio web o una ruta interna que navega a otra
+sección de la misma página.
+4
+En cuanto a los enlaces dentro de la página o internos, estos se llaman Anclas
+Las anclas permiten crear enlaces de navegación interna que llevan a los
+usuarios a puntos específicos dentro de la misma página, mejorando
+significativamente la experiencia del usuario en páginas largas o complejas.
+5
+4 Accesibilidad:
+ <a href=”https://www.ejemplo,com ">Visita Ejemplo</a>
+5 Accesibilidad:
+ <a href=”#seccion1 ">Ir a la sección 1</a>
+ …
+ <div id=”seccion1 ">Contenido de la sección 1</a>
+9
+target:
+Este atributo determina cómo se abrirá el enlace en la ventana del
+navegador. Por ejemplo, _blank abre el enlace en una nueva pestaña o
+ventana, fomentando una navegación que mantiene a los usuarios en tu
+página original.
+6
+title:
+Proporciona información adicional sobre el enlace, generalmente mostrada
+como una "tooltip" al pasar el cursor sobre el enlace. Este atributo mejora la
+accesibilidad y proporciona contexto adicional a los usuarios.
+7
+rel:
+Especifica la relación entre la página actual y el destino del enlace, como
+nofollow para indicar a los motores de búsqueda que no sigan ese enlace o
+noopener para mejorar la seguridad al abrir enlaces en nuevas pestañas.
+8
+6 Accesibilidad:
+ <a href="hetps://wm.ejenplo.com" target="_blank">Visita Ejemplo en una nueva pestaña</a>
+7 Accesibilidad:
+ <a href="https: //www.ejemplo.com" title="Aprende más sobre Ejemplo">Visita Ejemplo</a>
+8 Accesibilidad:
+ <a href="https: //www.ejemplo.com" rel="noopener noreferrer">Visita Ejemplo</a>
+10
+Aspectos de usabilidad y accesibilidad
+Crear enlaces accesibles y fáciles de usar es crucial para una web inclusiva.
+Usa textos de enlace descriptivos que informen a los usuarios sobre el
+destino del enlace, evita el texto genérico como "haz clic aquí", y asegúrate
+de que los enlaces sean fácilmente identificables con estilos distintivos (el
+texto subrayado y con el clásico color azul). La accesibilidad no solo beneficia
+a los usuarios con discapacidades, sino que mejora la experiencia de todos
+los usuarios y ayuda a los motores de búsqueda a entender mejor tu sitio.
+11
+Trabajando con listas
+Las listas son herramientas esenciales en la web, permitiendo a los creadores
+de contenido organizar la información de manera clara y coherente. HTML
+ofrece varios tipos de listas para adaptarse a diferentes necesidades de
+contenido, desde la presentación de elementos en un orden específico hasta
+la definición de términos y sus descripciones. Exploraremos los distintos
+tipos de listas, cómo construirlas y sus aplicaciones más comunes, además
+de introducir conceptos básicos para estilizarlas con CSS y mejorar su
+apariencia visual.
+12
+Tipos de listas
+Los tipos de listas que puedes utilizar son los siguientes:
+Listas ordenadas (<ol>):
+Utilizadas para mostrar una lista de ítems en un orden secuencial donde la
+secuencia es importante, como pasos en una receta o una lista de
+clasificación. Cada elemento de la lista se marca con un <li>.
+9
+9 Accesibilidad:
+<ol>
+<li>Primer paso</1i>
+<li>Segundo paso</1i>
+</ol>
+13
+Listas no ordenadas (<ul>):
+Ideales para listas donde el orden de los ítems no es relevante, como
+características de un producto o ítems en un menú. Al igual que con las listas
+ordenadas, los ítems se marcan con <li>.
+10
+Listas de definición (<dl>):
+Diseñadas para presentar un conjunto de términos y sus respectivas
+descripciones. Dentro de una <dl>, <dt> se utiliza para el término que se está
+definiendo, y <dd> para la descripción.
+11
+10 Accesibilidad
+ <ul>
+ <li>Caracteristica A</1i>
+ <li>Caracteristica B</1i>
+ </ul>
+11 Accesibilidad:
+ <dl>
+ <dt>Término 1</dt>
+ <dd>Descripción 1</dd>
+ <dt>Término 2</dt>
+ <dd>Descripción 2e/dd>
+ </dl>
+14
+¿Cómo construir las listas?
+La estructura de las listas en HTML es intuitiva y su construcción en sus
+aspectos básicos es sencilla: se comienza con la etiqueta de la lista (<ol>, <ul>,
+o <dl>) y luego se insertan los ítems o términos/descripciones dentro de esta,
+utilizando <li> para listas ordenadas y no ordenadas, y <dt> y <dd> para listas
+de definición.
+Esta estructura no solo ayuda a organizar el contenido de manera lógica, sino
+que también facilita la navegación y comprensión para los usuarios y los
+motores de búsqueda.
+Usos comunes de listas
+Las listas tienen una amplia gama de aplicaciones en la web:
+• Menús de navegación: Las listas no ordenadas son comúnmente
+utilizadas para crear menús de navegación, donde cada <li>
+representa un enlace a otra parte del sitio.
+• Listados de artículos: Tanto las listas ordenadas como las no
+ordenadas pueden usarse para presentar artículos, productos o
+servicios, proporcionando una estructura clara.
+• Glosarios: Las listas de definición son perfectas para crear glosarios o
+secciones de preguntas frecuentes, donde cada término y su
+descripción están claramente delineados.
+15
+Conclusión
+A medida que concluimos nuestro viaje a través de las imágenes, enlaces y
+listas en HTML, hemos adquirido las herramientas para enriquecer nuestras
+páginas web con contenido visual atractivo, crear conexiones a través de
+enlaces intuitivos y organizar la información de manera efectiva. Estos
+elementos son fundamentales para diseñar experiencias web que no solo
+informen y entretengan, sino que también inviten a la interacción y
+exploración.
+Mirando hacia adelante, el próximo módulo nos llevará a la tierra de los
+"Formularios y Elementos de Entrada", donde aprenderemos a capturar la voz de
+nuestros usuarios, permitiéndoles comunicarse e interactuar con nuestras
+páginas de maneras significativas. La habilidad para construir formularios
+bien diseñados y funcionales es esencial para cualquier desarrollador web,
+abriendo puertas a una amplia gama de aplicaciones, desde la recopilación
+de comentarios hasta la realización de transacciones en línea.
+16
+Recursos adicionales
+Para ayudarte a profundizar en los temas cubiertos y expandir tu
+conocimiento y habilidades en el desarrollo web, aquí hay una selección de
+recursos completamente gratuitos:
+Documentación y tutoriales
+• MDN Web Docs: Ofrece guías exhaustivas y documentación de
+referencia sobre HTML, perfectas para entender en profundidad el uso
+de imágenes, enlaces y listas.
+https://developer.mozilla.org/es/
+• W3Schools: Proporciona tutoriales accesibles y ejemplos prácticos
+que son ideales para iniciarse y reforzar los conocimientos en HTML.
+https://www.w3schools.com/html/
+Herramientas para optimizar imágenes
+• TinyPNG: Un servicio en línea que permite comprimir imágenes PNG
+y JPEG, reduciendo el tamaño del archivo sin una pérdida significativa
+de calidad. Es una herramienta gratuita para uso básico con algunas
+limitaciones en la cantidad de imágenes que puedes comprimir a la
+vez.
+https://tinypng.com/
+• Squoosh: Una aplicación web desarrollada por Google Chrome Labs
+que te permite comprimir y ajustar la calidad de las imágenes
+directamente desde tu navegador. Es gratuita y soporta múltiples
+formatos de imagen.
+https://squoosh.app/	
+ -->
